@@ -1,0 +1,32 @@
+name: Atualizar Métricas do Perfil
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # Roda a cada 6 horas automaticamente
+  workflow_dispatch: # Permite rodar manualmente clicando em um botão
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Clonar Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Executar Script de Métricas
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: python3 scripts/generate_profile_metrics.py
+
+      - name: Enviar SVGs Atualizados para o Repositório
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: atualiza metricas do perfil automaticamente [skip ci]"
+          branch: main
