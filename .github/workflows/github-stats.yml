@@ -2,14 +2,16 @@ name: Atualizar Métricas do Perfil
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # Roda a cada 6 horas automaticamente
-  workflow_dispatch: # Permite rodar manualmente clicando em um botão
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      metadata: read
+      id-token: write
     steps:
       - name: Clonar Repositório
         uses: actions/checkout@v4
