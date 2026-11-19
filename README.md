@@ -300,6 +300,48 @@ Evoluir continuamente minhas habilidades técnicas, construir sistemas úteis e 
 <div align="center"><img src="./assets/divisoria-ellen.svg" width="100%" alt="Divisória" /></div>
 
 <!-- ======================================================= -->
+<!-- MENÇÃO HONROSA // PARCEIRO DE JORNADA                  -->
+<!-- ======================================================= -->
+
+<a name="aliado"></a>
+
+<div align="center">
+  <h3>🦈 MENÇÃO HONROSA // PARCEIRO DE JORNADA 🦊</h3>
+  <sub>KOIYUN × SH3DOW // AGENTES DIFERENTES. MESMO ESQUADRÃO.</sub>
+</div>
+
+<br />
+
+<table width="100%">
+<tr>
+<td width="24%" align="center" valign="middle">
+  <a href="https://github.com/Stealth-Sh3dow">
+    <img src="https://github.com/Stealth-Sh3dow.png?size=200" width="110" alt="Alan David / SH3DOW GitHub avatar" />
+  </a>
+  <br />
+  <sub><b>SH3DOW</b></sub>
+</td>
+<td width="76%" valign="middle">
+  <h3>🦊 Alan David (SH3DOW)</h3>
+  <p><b>Amigo. Mentor. Parceiro de código.</b></p>
+  <p>Foi quem me apresentou ao mundo da programação e me guiou nos primeiros passos, mostrando na prática como estruturar ideias, automatizar processos e evoluir como desenvolvedor.</p>
+  <p>E no fim, a gente montou a dupla no mesmo universo: <b>Ellen Joe</b> do meu lado, <b>Hoshimi Miyabi</b> do dele. 🦈🦊</p>
+  <a href="https://github.com/Stealth-Sh3dow">
+    <img src="https://img.shields.io/badge/CONHE%C3%87A-SH3DOW-E62E4D?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;labelColor=0D1117" alt="Visitar SH3DOW no GitHub" />
+  </a>
+</td>
+</tr>
+</table>
+
+<div align="center">
+  <sub>DOS PRIMEIROS PASSOS NO CÓDIGO PARA NOSSAS PRÓPRIAS MISSÕES. VALEU POR TUDO, MANO. ❤️</sub>
+</div>
+
+<br />
+
+<div align="center"><img src="./assets/divisoria-ellen.svg" width="100%" alt="Divisória" /></div>
+
+<!-- ======================================================= -->
 <!-- 06 // CONEXÕES & FIM DA TRANSMISSÃO                      -->
 <!-- ======================================================= -->
 
