@@ -33,7 +33,7 @@
 <!-- INTRODUÇÃO ANIMADA -->
 
 <img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=2600&pause=900&color=E62E4D¢er=true&vCenter=true&width=700&height=55&lines=Koiyun+%2F%2F+Developer+Trainee;Back-end+%26+Automa%C3%A7%C3%A3o;Java%2C+Node.js+%26+Banco+de+Dados;Construindo+Sistemas+na+Pr%C3%A1tica."
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=2600&pause=900&color=E62E4D&center=true&vCenter=true&width=700&height=55&lines=Koiyun+%2F%2F+Developer+Trainee;Back-end+%26+Automa%C3%A7%C3%A3o;Java%2C+Node.js+%26+Banco+de+Dados;Construindo+Sistemas+na+Pr%C3%A1tica."
   width="90%"
   alt="Introdução animada"
 />
