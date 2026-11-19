@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="190" viewBox="0 0 940 190" role="img">
+<rect width="940" height="190" rx="12" fill="#0D1117" stroke="#E62E4D" stroke-width="1.2"/>
+<text x="24" y="32" fill="#E62E4D" font-size="19" font-weight="700" font-family="Segoe UI, sans-serif">MOISÉS // DEVELOPMENT RECORD</text>
+<text x="916" y="32" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">DESDE 2018</text>
+<path d="M24 45 H916" stroke="#21262D" stroke-width="1"/>
+<text x="28" y="78" fill="#8B949E" font-size="11" font-weight="700" font-family="Segoe UI, sans-serif">PROJETOS</text>
+<text x="28" y="122" fill="#E62E4D" font-size="37" font-weight="700" font-family="Segoe UI, sans-serif">15</text>
+<path d="M243 58 V148" stroke="#21262D" stroke-width="1"/>
+<text x="258" y="78" fill="#8B949E" font-size="11" font-weight="700" font-family="Segoe UI, sans-serif">CONTRIBUIÇÕES</text>
+<text x="258" y="122" fill="#F5F7FA" font-size="37" font-weight="700" font-family="Segoe UI, sans-serif">0</text>
+<path d="M473 58 V148" stroke="#21262D" stroke-width="1"/>
+<text x="488" y="78" fill="#8B949E" font-size="11" font-weight="700" font-family="Segoe UI, sans-serif">EM 2026</text>
+<text x="488" y="122" fill="#E62E4D" font-size="37" font-weight="700" font-family="Segoe UI, sans-serif">0</text>
+<path d="M703 58 V148" stroke="#21262D" stroke-width="1"/>
+<text x="718" y="78" fill="#8B949E" font-size="11" font-weight="700" font-family="Segoe UI, sans-serif">LINGUAGENS</text>
+<text x="718" y="122" fill="#F5F7FA" font-size="37" font-weight="700" font-family="Segoe UI, sans-serif">6</text>
+<path d="M24 151 H916" stroke="#21262D" stroke-width="1"/>
+<text x="24" y="175" fill="#8B949E" font-size="12" font-family="Segoe UI, sans-serif">Atividade de desenvolvimento, Java e persistência de dados.</text>
+</svg>

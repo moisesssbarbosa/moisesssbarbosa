@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="310" viewBox="0 0 470 310" role="img">
+<rect x="0.5" y="0.5" width="469" height="309" rx="12" fill="#0D1117" stroke="#21262D"/>
+<text x="22" y="32" fill="#E62E4D" font-size="20" font-weight="700" font-family="Segoe UI, sans-serif">LINGUAGENS // VOLUME</text>
+<text x="22" y="53" fill="#8B949E" font-size="12" font-family="Segoe UI, sans-serif">Distribuição por bytes de código</text>
+<rect x="23" y="75" width="8" height="8" rx="2" fill="#E62E4D"/>
+<text x="39" y="85" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">Java</text>
+<rect x="198" y="75" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="75" width="118" height="9" rx="4" fill="#E62E4D"/>
+<text x="451" y="85" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">72.2%</text>
+<rect x="23" y="100" width="8" height="8" rx="2" fill="#FF5566"/>
+<text x="39" y="110" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">TypeScript</text>
+<rect x="198" y="100" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="100" width="33" height="9" rx="4" fill="#FF5566"/>
+<text x="451" y="110" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">20.3%</text>
+<rect x="23" y="125" width="8" height="8" rx="2" fill="#FF8093"/>
+<text x="39" y="135" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">JavaScript</text>
+<rect x="198" y="125" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="125" width="7" height="9" rx="4" fill="#FF8093"/>
+<text x="451" y="135" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">4.2%</text>
+<rect x="23" y="150" width="8" height="8" rx="2" fill="#FFA6B5"/>
+<text x="39" y="160" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">Python</text>
+<rect x="198" y="150" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="150" width="3" height="9" rx="4" fill="#FFA6B5"/>
+<text x="451" y="160" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">2.0%</text>
+<rect x="23" y="175" width="8" height="8" rx="2" fill="#D9233E"/>
+<text x="39" y="185" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">CSS</text>
+<rect x="198" y="175" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="175" width="2" height="9" rx="4" fill="#D9233E"/>
+<text x="451" y="185" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">1.1%</text>
+<rect x="23" y="200" width="8" height="8" rx="2" fill="#B81C33"/>
+<text x="39" y="210" fill="#F5F7FA" font-size="12" font-family="Segoe UI, sans-serif">HTML</text>
+<rect x="198" y="200" width="163" height="9" rx="4" fill="#21262D"/>
+<rect x="198" y="200" width="1" height="9" rx="4" fill="#B81C33"/>
+<text x="451" y="210" fill="#8B949E" font-size="12" text-anchor="end" font-family="Segoe UI, sans-serif">0.2%</text>
+<path d="M22 282 H448" stroke="#21262D"/>
+<text x="22" y="299" fill="#8B949E" font-size="11" font-family="Segoe UI, sans-serif">Distribuição por volume de código</text>
+</svg>
