@@ -15,7 +15,7 @@
 
 <div align="center">
 
-<img src="./assets/banner-ellen.png" width="100%" alt="MOISÉS // Ellen Joe Banner" />
+<img src="./assets/banner-ellen.png" width="100%" alt="Koiyun // Ellen Joe" />
 
 <br />
 
