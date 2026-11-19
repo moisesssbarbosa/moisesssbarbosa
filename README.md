@@ -15,7 +15,6 @@
 
 <div align="center">
 
-<!-- Lembre-se de subir sua arte no Affinity com o nome banner-ellen.png dentro da pasta assets/ -->
 <img src="./assets/banner-ellen.png" width="100%" alt="MOISÉS // Ellen Joe Banner" />
 
 <br />
