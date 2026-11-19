@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Profile metrics: aggregate public/private GitHub data.
-Uses only Python's standard library. The PAT remains a GitHub Actions secret.
+"""Profile metrics: aggregate public GitHub data.
+Uses only Python's standard library.
 """
 import collections
 import datetime as dt
@@ -26,20 +26,20 @@ BAR = "#21262D"
 PALETTE = [RED, "#FF5566", "#FF8093", "#FFA6B5", "#D9233E", "#B81C33", "#991428", "#7A0D1D"]
 
 def gh_request(path, body=None):
-    if not TOKEN:
-        raise RuntimeError("GitHub token is missing.")
     url = API + path
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "profile-metrics",
+    }
+    if TOKEN:
+        headers["Authorization"] = "Bearer " + TOKEN
+    
     data = json.dumps(body).encode("utf-8") if body is not None else None
-    request = urllib.request.Request(
-        url, data=data,
-        headers={
-            "Accept": "application/vnd.github+json",
-            "Authorization": "Bearer " + TOKEN,
-            "X-GitHub-Api-Version": "2022-11-28",
-            "User-Agent": "profile-metrics",
-            **({"Content-Type": "application/json"} if data is not None else {}),
-        },
-    )
+    if data is not None:
+        headers["Content-Type"] = "application/json"
+
+    request = urllib.request.Request(url, data=data, headers=headers)
     try:
         with urllib.request.urlopen(request, timeout=40) as response:
             return json.load(response)
@@ -57,12 +57,11 @@ def collect_repositories():
     seen = {}
     for page in range(1, 21):
         params = urllib.parse.urlencode({
-            "affiliation": "owner,collaborator,organization_member",
-            "visibility": "all",
             "per_page": 100,
             "page": page,
         })
-        repos = gh_request("/user/repos?" + params)
+        # Usa a rota pública do usuário para evitar erro 403 de escopo
+        repos = gh_request(f"/users/{LOGIN}/repos?" + params)
         if not isinstance(repos, list):
             raise RuntimeError("Unexpected repository API response")
         for repo in repos:
@@ -72,8 +71,12 @@ def collect_repositories():
     raise RuntimeError("Too many accessible repositories.")
 
 def collect_contributions():
-    viewer = graphql("query { viewer { login createdAt } }")["viewer"]
-    start_year = int(viewer["createdAt"][:4])
+    try:
+        viewer = graphql("query { viewer { login createdAt } }")["viewer"]
+        start_year = int(viewer["createdAt"][:4])
+    except Exception:
+        start_year = dt.datetime.now().year
+        
     now = dt.datetime.now(dt.timezone.utc)
     calendar_total = 0
     annual = {}
@@ -84,18 +87,21 @@ def collect_contributions():
         }
       }
     }"""
-    for year in range(start_year, now.year + 1):
-        first = dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc)
-        last = min(
-            dt.datetime(year + 1, 1, 1, tzinfo=dt.timezone.utc) - dt.timedelta(seconds=1),
-            now,
-        )
-        variables = {"from": first.isoformat().replace("+00:00", "Z"),
-                     "to": last.isoformat().replace("+00:00", "Z")}
-        data = graphql(q, variables)
-        count = int(data["viewer"]["contributionsCollection"]["contributionCalendar"]["totalContributions"])
-        annual[year] = count
-        calendar_total += count
+    try:
+        for year in range(start_year, now.year + 1):
+            first = dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc)
+            last = min(
+                dt.datetime(year + 1, 1, 1, tzinfo=dt.timezone.utc) - dt.timedelta(seconds=1),
+                now,
+            )
+            variables = {"from": first.isoformat().replace("+00:00", "Z"),
+                         "to": last.isoformat().replace("+00:00", "Z")}
+            data = graphql(q, variables)
+            count = int(data["viewer"]["contributionsCollection"]["contributionCalendar"]["totalContributions"])
+            annual[year] = count
+            calendar_total += count
+    except Exception:
+        pass
     return start_year, calendar_total, annual
 
 def xml(value):
@@ -166,9 +172,9 @@ def language_card(filename, title, subtitle, ranks, denominator, mode):
     write_svg(filename, "\n".join(parts))
 
 def main():
+    if not LOGIN:
+        raise RuntimeError("GitHub repository owner is missing.")
     repositories = collect_repositories()
-    if not repositories:
-        raise RuntimeError("Nenhum repositório acessível.")
     counts = collections.Counter()
     byte_totals = collections.Counter()
     for repo in repositories:
